@@ -1,0 +1,57 @@
+.modal {
+  display: flex;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 26vw;
+  background-color: white;
+  border-radius: 20px 0px 0px 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding-top: 12px;
+}
+
+.modal-close-button {
+  height: 24px;
+  width: 24px;
+  background-color: transparent;
+  border: 0px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../../../public/images/close.svg");
+  cursor: pointer;
+}
+
+.buttons-container {
+  height: 70vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-spacer {
+  height: 16px;
+}

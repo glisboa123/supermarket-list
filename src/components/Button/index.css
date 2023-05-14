@@ -1,4 +1,7 @@
 .button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   background-color: #7785db;
   font-size: 14px;
@@ -9,4 +12,22 @@
   height: 42px;
   border: 0px;
   cursor: pointer;
+  border: 1px solid #7785db;
+}
+
+.main {
+  background-color: #7785db;
+  color: white;
+}
+
+.outline {
+  background-color: #f2f4ff;
+  color: #7785db;
+}
+
+.button-icon {
+  height: 24px;
+  width: 24px;
+  object-fit: contain;
+  margin-right: 6px;
 }
