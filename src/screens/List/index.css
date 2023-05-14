@@ -2,7 +2,6 @@
   display: flex;
   background-color: #7785db;
   align-items: center;
-  flex: 1;
   justify-content: center;
   width: 100vw;
   height: 100vh;
@@ -58,4 +57,33 @@
 
 .info-text {
   text-align: center;
+}
+
+@media screen and (max-width: 830px) {
+  .list-screen-header-title {
+    font-size: 24px;
+  }
+  .list-screen-content-container {
+    width: 82vw;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .list-screen-content-container {
+    width: 82vw;
+  }
+
+  .list-screen-header-title {
+    font-size: 18px;
+    line-height: 14px;
+  }
+
+  .logo-image {
+    width: 34px;
+    height: auto;
+  }
+
+  .list-screen-header-button-container {
+    width: 42px;
+  }
 }

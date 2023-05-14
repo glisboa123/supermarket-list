@@ -82,15 +82,19 @@ export const Modal = ({ onClose, item }) => {
           type="number"
         />
         <div className="buttons-container">
-          <Button onClick={item ? callUpdateItem : callAddItem}>
-            {item ? "Atualizar item" : "Adicionar item"}
-          </Button>
-          <div className="button-spacer" />
-          {item && (
-            <Button icon="trash" variant="outline" onClick={callDeleteItem}>
-              Deletar item
+          <div>
+            {" "}
+            <Button onClick={item ? callUpdateItem : callAddItem}>
+              {item ? "Atualizar item" : "Adicionar item"}
             </Button>
-          )}
+          </div>
+          <div>
+            {item && (
+              <Button icon="trash" variant="outline" onClick={callDeleteItem}>
+                Deletar item
+              </Button>
+            )}
+          </div>
         </div>
       </div>
     </div>
