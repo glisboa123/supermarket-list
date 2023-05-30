@@ -6,6 +6,10 @@ This is an application build using React.js with the goal of make easier create 
 <img height="500" src="https://github.com/glisboa123/supermarket-list/blob/main/public/images/demo.gif?raw=true"/>
 </p>
 
+## Link to production App
+
+https://supermarket-list-production.up.railway.app/
+
 ## Technologies Used
 
 - React.js
