@@ -6,11 +6,15 @@ This is an application build using React.js with the goal of make easier create 
 <img height="500" src="https://github.com/glisboa123/supermarket-list/blob/main/public/images/demo.gif?raw=true"/>
 </p>
 
-# Technologies Used
+## Technologies Used
 
 - React.js
 - CSS
 - Axios
+
+## Requirements to run:
+
+- Node.js (https://node.js.org/en/)
 
 ## Running Instructions
 
