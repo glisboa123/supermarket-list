@@ -1,4 +1,4 @@
-import "./index.css";
+import './index.css'
 
 export const ListCard = ({ item, onClick, onCheckItem }) => {
   return (
@@ -6,7 +6,7 @@ export const ListCard = ({ item, onClick, onCheckItem }) => {
       <img
         onClick={() => onCheckItem(item)}
         className="check-box"
-        src={`/images/${item?.checked ? "checked.svg" : "unchecked.svg"}`}
+        src={`/images/${item?.checked ? 'checked.svg' : 'unchecked.svg'}`}
         alt="checked-item"
       ></img>
       <div className="list-card-text-container" onClick={() => onClick(item)}>
@@ -15,5 +15,5 @@ export const ListCard = ({ item, onClick, onCheckItem }) => {
       </div>
       <img src="/images/arrow.svg" alt="arrow-icon" className="arrow-icon" />
     </div>
-  );
-};
+  )
+}

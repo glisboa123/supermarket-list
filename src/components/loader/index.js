@@ -1,4 +1,4 @@
-import "./index.css";
+import './index.css'
 
 export const Loader = () => (
   <div className="lds-roller">
@@ -11,4 +11,4 @@ export const Loader = () => (
     <div></div>
     <div></div>
   </div>
-);
+)

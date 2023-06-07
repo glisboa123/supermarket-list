@@ -41,7 +41,7 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url("../../../public/images/close.svg");
+  background-image: url('../../../public/images/close.svg');
   cursor: pointer;
 }
 

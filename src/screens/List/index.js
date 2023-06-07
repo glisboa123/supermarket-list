@@ -1,50 +1,50 @@
-import { useState, useEffect } from "react";
-import "./index.css";
-import { getList, updateItem } from "../../services/request";
-import { Button, ListRender, Loader, Modal } from "../../components";
+import { useState, useEffect } from 'react'
+import './index.css'
+import { getList, updateItem } from 'services/request'
+import { Button, ListRender, Loader, Modal } from 'components'
 
 export const ListScreen = () => {
-  const [modalVisible, setModalVisible] = useState(false);
-  const [loading, setLoading] = useState(true);
-  const [listData, setListData] = useState([]);
-  const [selectedItem, setSelectedItem] = useState(null);
+  const [modalVisible, setModalVisible] = useState(false)
+  const [loading, setLoading] = useState(true)
+  const [listData, setListData] = useState([])
+  const [selectedItem, setSelectedItem] = useState(null)
   const loadListItems = async () => {
-    setLoading(true);
-    const result = await getList();
-    setListData(result);
-    setLoading(false);
-  };
+    setLoading(true)
+    const result = await getList()
+    setListData(result)
+    setLoading(false)
+  }
 
   useEffect(() => {
-    loadListItems();
-  }, []);
+    loadListItems()
+  }, [])
 
   const onClickAddButton = () => {
-    setSelectedItem(null);
-    setModalVisible(true);
-  };
+    setSelectedItem(null)
+    setModalVisible(true)
+  }
 
   const onCloseModal = () => {
-    setModalVisible(false);
-    loadListItems();
-    setSelectedItem(null);
-  };
+    setModalVisible(false)
+    loadListItems()
+    setSelectedItem(null)
+  }
 
   const onEditItem = (item) => {
-    setSelectedItem(item);
-    setModalVisible(true);
-  };
+    setSelectedItem(item)
+    setModalVisible(true)
+  }
 
   const onCheckItem = async (item) => {
     const result = await updateItem(item._id, {
       ...item,
-      checked: !item.checked,
-    });
+      checked: !item.checked
+    })
 
     if (!result.error) {
-      await loadListItems();
+      await loadListItems()
     }
-  };
+  }
 
   return (
     <div className="list-screen-container">
@@ -60,7 +60,7 @@ export const ListScreen = () => {
           </div>
           <div className="list-screen-header-button-container">
             <Button onClick={onClickAddButton}>
-              {window.innerWidth <= 420 ? "+" : "Adicionar itens"}
+              {window.innerWidth <= 420 ? '+' : 'Adicionar itens'}
             </Button>
           </div>
         </div>
@@ -78,5 +78,5 @@ export const ListScreen = () => {
       </div>
       {modalVisible && <Modal item={selectedItem} onClose={onCloseModal} />}
     </div>
-  );
-};
+  )
+}
